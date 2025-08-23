@@ -1266,7 +1266,7 @@ dependencies = [
  "frost-core",
  "frost-ed25519",
  "frost-rerandomized",
- "frost-secp256k1-tr",
+ "frost-secp256k1",
  "hex",
  "itertools 0.14.0",
  "message-io",
@@ -1340,10 +1340,10 @@ dependencies = [
 ]
 
 [[package]]
-name = "frost-secp256k1-tr"
+name = "frost-secp256k1"
 version = "2.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "be31fe5caf49ffddb2a823b078567bebf9ab844d750d69fdac7d614e4a3eb44a"
+checksum = "2d4890a0cdd6897a4af81016ec3299e4eb3a459d6468933d2a385302241662b5"
 dependencies = [
  "document-features",
  "frost-core",
@@ -1368,7 +1368,7 @@ dependencies = [
  "frost-core",
  "frost-ed25519",
  "frost-rerandomized",
- "frost-secp256k1-tr",
+ "frost-secp256k1",
  "futures",
  "futures-util",
  "hex",
@@ -3867,7 +3867,7 @@ dependencies = [
  "exitcode",
  "frost-client",
  "frost-ed25519",
- "frost-secp256k1-tr",
+ "frost-secp256k1",
  "frostd",
  "hex",
  "rand 0.8.5",

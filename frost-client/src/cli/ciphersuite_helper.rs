@@ -6,7 +6,8 @@ use frost_core::{
     Ciphersuite,
 };
 use frost_ed25519::Ed25519Sha512;
-use frost_secp256k1_tr::Secp256K1Sha256TR;
+//use frost_secp256k1_tr::Secp256K1Sha256TR;
+use frost_secp256k1::Secp256K1Sha256;
 use reddsa::frost::redpallas::PallasBlake2b512;
 
 /// Additional information about a group, derived from the key packages.
@@ -52,9 +53,13 @@ pub(crate) fn ciphersuite_helper(
         return Ok(Box::new(
             CiphersuiteHelperImpl::<PallasBlake2b512>::default(),
         ));
-    } else if ciphersuite_id == Secp256K1Sha256TR::ID {
+//    } else if ciphersuite_id == Secp256K1Sha256TR::ID {
+//        return Ok(Box::new(
+//            CiphersuiteHelperImpl::<Secp256K1Sha256TR>::default(),
+//        ));
+    } else if ciphersuite_id == Secp256K1Sha256::ID {
         return Ok(Box::new(
-            CiphersuiteHelperImpl::<Secp256K1Sha256TR>::default(),
+            CiphersuiteHelperImpl::<Secp256K1Sha256>::default(),
         ));
     }
     Err(eyre!("invalid ciphersuite ID").into())
